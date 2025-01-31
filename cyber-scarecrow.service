@@ -1,0 +1,13 @@
+[Unit]
+Description=Cyber Scarecrow IoT Security Service
+After=network.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+Environment=LD_PRELOAD=/usr/lib/cyber_scarecrow.so
+ExecStart=/bin/sh -c 'echo "/usr/lib/cyber_scarecrow.so" > /etc/ld.so.preload'
+ExecStop=/bin/sh -c 'echo "" > /etc/ld.so.preload'
+
+[Install]
+WantedBy=multi-user.target 

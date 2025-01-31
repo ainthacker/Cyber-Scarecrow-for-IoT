@@ -1,0 +1,22 @@
+# Derlenmiş dosyalar
+*.so
+*.o
+test_target
+test_hook
+test_hook.c
+__pycache__/
+*.pyc
+
+# Geçici dosyalar
+*.log
+*~
+.DS_Store
+
+# IDE/Editor dosyaları
+.vscode/
+.idea/
+*.swp
+
+# Sistem dosyaları
+/usr/lib/cyber_scarecrow.so
+/etc/ld.so.preload 
